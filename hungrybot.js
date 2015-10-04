@@ -11,6 +11,7 @@ var businessAddress = '';
 var businessPhone = '';
 var distance = '';
 var foodType = '';
+var googleMapUrl = '';
 
 if (Meteor.isClient) {
 
@@ -89,11 +90,13 @@ if (Meteor.isClient) {
                 businessPhone = businesses[index].display_phone;
                 distance = Math.round(businesses[index].distance);
 
+                googleMapUrl = "https://www.google.com/maps/place/" + String(businessAddress).replace(" ", "+");
+
                 $("body").append(
                   '<div class = "jumbotron">'
                   +   "<p class = 'text-center'>Let's have some " + foodType + " at</p>"
                   +   '<h1 class = "text-center">' + businessName + '</h1>'
-                  +   '<p class = "text-center">' + businessAddress + '</p>'
+                  +   '<p class = "text-center">' + '<a href = "'+ googleMapUrl + '">' + businessAddress + '</a></p>'
                   +   '<p class = "text-center">' + businessPhone + '</p>'
                   +   '<p class = "text-center">Only ' + distance + ' meters away!</p>'
                   + '</div>'
