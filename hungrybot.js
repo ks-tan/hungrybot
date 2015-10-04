@@ -99,7 +99,7 @@ if (Meteor.isClient) {
                   + '</div>'
                 );
 
-                Session.set("displayResult", true)
+                Session.set("displayResult", true);
               }
             });
           });
