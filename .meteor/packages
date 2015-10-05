@@ -18,14 +18,14 @@ ecmascript              # Enable ECMAScript2015+ syntax in app code
 
 autopublish             # Publish all data to the clients (for prototyping)
 insecure                # Allow all DB writes from clients (for prototyping)
-fourseven:scss
-reywood:bootstrap3-sass
-mdg:geolocation
-http
-meteorhacks:npm
+fourseven:scss				# To enable SASS
+reywood:bootstrap3-sass		# To enable SASS
+mdg:geolocation			# To find current device's location
+http                    # To make http calls
+meteorhacks:npm     	# To allow node packages to be imported 
 
 
 
 
 npm-container
-sacha:spin
+sacha:spin 				# Spinning loading indicator. To make the UI pretty
